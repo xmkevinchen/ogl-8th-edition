@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ch03-instancing.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>triangles.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>0A52360A1CAA531100ED5AAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A5FC3C41CACD09000A178B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

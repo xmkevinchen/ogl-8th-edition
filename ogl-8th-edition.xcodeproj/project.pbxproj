@@ -15,6 +15,13 @@
 		0A52361A1CAA54B800ED5AAA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5236191CAA54B800ED5AAA /* main.cpp */; };
 		0A52361E1CAA55B700ED5AAA /* primitive_restart.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A52361C1CAA54F700ED5AAA /* primitive_restart.vertex */; };
 		0A52361F1CAA55B700ED5AAA /* primitive_restart.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A52361D1CAA557600ED5AAA /* primitive_restart.fragment */; };
+		0A5FC3D01CACD0B400A178B5 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
+		0A5FC3D31CACD0F800A178B5 /* ch03_instancing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D21CACD0F800A178B5 /* ch03_instancing.cpp */; };
+		0A5FC3D61CACD23E00A178B5 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A5FC3D91CACEA1800A178B5 /* instancing.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3D71CACE72400A178B5 /* instancing.vertex */; };
+		0A5FC3DA1CACEA1800A178B5 /* instancing.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3D81CACE77F00A178B5 /* instancing.fragment */; };
+		0A5FC3DC1CACEA3E00A178B5 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
+		0A5FC3DD1CACF87E00A178B5 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +47,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A5FC3C91CACD09000A178B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0A5FC3DC1CACEA3E00A178B5 /* armadillo_low.vbm in CopyFiles */,
+				0A5FC3D91CACEA1800A178B5 /* instancing.vertex in CopyFiles */,
+				0A5FC3DA1CACEA1800A178B5 /* instancing.fragment in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +73,16 @@
 		0A5236191CAA54B800ED5AAA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0A52361C1CAA54F700ED5AAA /* primitive_restart.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = primitive_restart.vertex; sourceTree = "<group>"; };
 		0A52361D1CAA557600ED5AAA /* primitive_restart.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = primitive_restart.fragment; sourceTree = "<group>"; };
+		0A5FC3C11CACD06100A178B5 /* vbm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vbm.h; sourceTree = "<group>"; };
+		0A5FC3C21CACD06100A178B5 /* vutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vutils.h; sourceTree = "<group>"; };
+		0A5FC3C31CACD06100A178B5 /* vbm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vbm.cpp; sourceTree = "<group>"; };
+		0A5FC3CF1CACD09000A178B5 /* ch03-instancing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch03-instancing"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5FC3D21CACD0F800A178B5 /* ch03_instancing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch03_instancing.cpp; sourceTree = "<group>"; };
+		0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CKApp.cpp; sourceTree = "<group>"; };
+		0A5FC3D51CACD23E00A178B5 /* CKApp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CKApp.hpp; sourceTree = "<group>"; };
+		0A5FC3D71CACE72400A178B5 /* instancing.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing.vertex; sourceTree = "<group>"; };
+		0A5FC3D81CACE77F00A178B5 /* instancing.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing.fragment; sourceTree = "<group>"; };
+		0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = armadillo_low.vbm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +94,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0A52360E1CAA531100ED5AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FC3C81CACD09000A178B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +123,7 @@
 			children = (
 				0A5235FB1CAA3A9400ED5AAA /* triangles */,
 				0A5236151CAA531100ED5AAA /* ch03-drawcommands */,
+				0A5FC3CF1CACD09000A178B5 /* ch03-instancing */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +152,7 @@
 		0A5235F31CAA3A4200ED5AAA /* ch03 */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FC3D11CACD0D400A178B5 /* instancing */,
 				0A52361B1CAA54C100ED5AAA /* shaders */,
 				0A5236181CAA54B800ED5AAA /* drawcommands */,
 			);
@@ -126,6 +164,11 @@
 			children = (
 				0A5235F51CAA3A6A00ED5AAA /* shader.hpp */,
 				0A5235F61CAA3A6A00ED5AAA /* shader.cpp */,
+				0A5FC3C11CACD06100A178B5 /* vbm.h */,
+				0A5FC3C21CACD06100A178B5 /* vutils.h */,
+				0A5FC3C31CACD06100A178B5 /* vbm.cpp */,
+				0A5FC3D51CACD23E00A178B5 /* CKApp.hpp */,
+				0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -145,6 +188,17 @@
 				0A52361D1CAA557600ED5AAA /* primitive_restart.fragment */,
 			);
 			path = shaders;
+			sourceTree = "<group>";
+		};
+		0A5FC3D11CACD0D400A178B5 /* instancing */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FC3D21CACD0F800A178B5 /* ch03_instancing.cpp */,
+				0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */,
+				0A5FC3D71CACE72400A178B5 /* instancing.vertex */,
+				0A5FC3D81CACE77F00A178B5 /* instancing.fragment */,
+			);
+			path = instancing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +238,23 @@
 			productReference = 0A5236151CAA531100ED5AAA /* ch03-drawcommands */;
 			productType = "com.apple.product-type.tool";
 		};
+		0A5FC3C41CACD09000A178B5 /* ch03-instancing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FC3CC1CACD09000A178B5 /* Build configuration list for PBXNativeTarget "ch03-instancing" */;
+			buildPhases = (
+				0A5FC3C51CACD09000A178B5 /* Sources */,
+				0A5FC3C81CACD09000A178B5 /* Frameworks */,
+				0A5FC3C91CACD09000A178B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch03-instancing";
+			productName = triangles;
+			productReference = 0A5FC3CF1CACD09000A178B5 /* ch03-instancing */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +283,7 @@
 			targets = (
 				0A5235FA1CAA3A9400ED5AAA /* triangles */,
 				0A52360A1CAA531100ED5AAA /* ch03-drawcommands */,
+				0A5FC3C41CACD09000A178B5 /* ch03-instancing */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +304,17 @@
 			files = (
 				0A52361A1CAA54B800ED5AAA /* main.cpp in Sources */,
 				0A52360D1CAA531100ED5AAA /* shader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FC3C51CACD09000A178B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5FC3DD1CACF87E00A178B5 /* shader.cpp in Sources */,
+				0A5FC3D01CACD0B400A178B5 /* vbm.cpp in Sources */,
+				0A5FC3D31CACD0F800A178B5 /* ch03_instancing.cpp in Sources */,
+				0A5FC3D61CACD23E00A178B5 /* CKApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +494,52 @@
 			};
 			name = Release;
 		};
+		0A5FC3CD1CACD09000A178B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A5FC3CE1CACD09000A178B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,12 +559,22 @@
 				0A5236011CAA3A9500ED5AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A5236121CAA531100ED5AAA /* Build configuration list for PBXNativeTarget "ch03-drawcommands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A5236131CAA531100ED5AAA /* Debug */,
 				0A5236141CAA531100ED5AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5FC3CC1CACD09000A178B5 /* Build configuration list for PBXNativeTarget "ch03-instancing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FC3CD1CACD09000A178B5 /* Debug */,
+				0A5FC3CE1CACD09000A178B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

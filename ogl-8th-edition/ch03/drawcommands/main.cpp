@@ -63,9 +63,6 @@ int main(int argc, const char* argv[]) {
     
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
     
-    
-    
-    
     GLuint programID = LoadShaders("primitive_restart.vertex", "primitive_restart.fragment");
     glUseProgram(programID);
     GLuint render_model_matrix = glGetUniformLocation(programID, "model_matrix");
@@ -150,36 +147,26 @@ int main(int argc, const char* argv[]) {
         
         glUseProgram(programID);
         
-//        glm::mat4 model_matrix(glm::translate(glm::mat4(1.0f), glm::vec3(0.0, 0.0, -0.5))
-//                               * glm::rotate(glm::mat4(1.0f), t * 360.0f, Y)
-//                               * glm::rotate(glm::mat4(1.0f), t * 720.0f, Z));
-        
-        
         glm::mat4 projection_matrix(glm::frustum(-1.0f, 1.0f, -aspect, aspect, 1.0f, 500.0f));
         glUniformMatrix4fv(render_projection_matrix, 1, GL_FALSE, glm::value_ptr(projection_matrix));
         
-
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
         
-        glEnable(GL_PRIMITIVE_RESTART);
-        glPrimitiveRestartIndex(0xFFFFFFFF);
-        glDrawElements(GL_TRIANGLE_STRIP, 17, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0));
-        
             // Draw Arrays...
-        model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(-3.0f, 0.0f, -5.0f));
+        model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(-3.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
             // DrawElements
-        model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(-1.0f, 0.0f, -5.0f));
+        model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, NULL);
-        
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0));
+
             // DrawElementsBaseVertex
-        model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(1.0f, 0.0f, -5.0f));
+        model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(1.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
-        glDrawElementsBaseVertex(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, NULL, 1);
-        
+        glDrawElementsBaseVertex(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0), 1);
+
             // DrawArraysInstanced
         model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(3.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
