@@ -30,6 +30,7 @@ public:
     virtual void initialize();
     virtual void display();
     virtual void terminate();
+    virtual void resize(int width, int height);
     
 protected:
     GLuint programID;
@@ -39,6 +40,9 @@ protected:
     
     GLuint weight_vertex_buffer;
     GLuint color_vertex_buffer;
+    
+private:
+    float aspect;
     
 };
 
@@ -69,6 +73,10 @@ void InstancingApp::initialize() {
         
     }
     
+    int width = 0;
+    int height = 0;
+    glfwGetWindowSize(window, &width, &height);
+    aspect = float(height) / float(width);
     
     /* Create and allocate the VBO to hold the weights
      * Notice that we use the 'colors' array as the initial data,
@@ -77,7 +85,7 @@ void InstancingApp::initialize() {
     
     glGenBuffers(1, &weight_vertex_buffer);
     glBindBuffer(GL_ARRAY_BUFFER, weight_vertex_buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_DYNAMIC_DRAW);
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_DYNAMIC_DRAW);
     
     /* Here is the instanced vertex attribute - set the divisor */
     glVertexAttribDivisor(3, 1);
@@ -94,6 +102,8 @@ void InstancingApp::initialize() {
     glEnableVertexAttribArray(4);
     
     glBindVertexArray(0);
+    
+
     
 }
 
@@ -136,12 +146,6 @@ void InstancingApp::display() {
     
     glUniformMatrix4fv(vertex_model_matrix, 4, GL_FALSE, value_ptr(model_matrix[0]));
     
-    int width = 0;
-    int height = 0;
-    glfwGetWindowSize(window, &width, &height);
-    
-    float aspect = float(height) / float(width);
-    
     mat4 projection_matrix = frustum(-1.0f, 1.0f, -aspect, aspect, 1.0f, 5000.0f)
     * translate(mat4(1.0f), vec3(0.0f, 0.0f, -100.0f));
     
@@ -155,8 +159,12 @@ void InstancingApp::terminate() {
     glDeleteProgram(programID);
     glDeleteBuffers(1, &weight_vertex_buffer);
     glDeleteBuffers(1, &color_vertex_buffer);
+    object.Free();
 }
 
+void InstancingApp::resize(int width, int height) {
+    aspect = float(height) / float(width);
+}
 
 
 int main(int argc, const char* argv[]) {

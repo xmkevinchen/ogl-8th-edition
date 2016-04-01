@@ -17,22 +17,25 @@ class GLFWwindow;
 class CKApplication {
     
 public:
-
-    const char *title;
     
+    const char *title;
     explicit CKApplication(const char *title) {
-        this->title = title;
+        this->title = title;        
     }
                     
     virtual void initialize() = 0;
     virtual void display() = 0;
     virtual void terminate() = 0;
+    virtual void resize(int width, int height) = 0;
     
     void run();
     
 protected:
-    GLFWwindow *window;
+    GLFWwindow *window;        
+    static void windowSizeDidChange(GLFWwindow *window, int width, int height);
     
 };
+
+static CKApplication *application;
 
 #endif /* CKApp_hpp */

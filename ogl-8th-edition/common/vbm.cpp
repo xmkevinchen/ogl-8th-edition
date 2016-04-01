@@ -41,7 +41,7 @@ bool VBObject::LoadFromVBM(const char * filename, int vertexIndex, int normalInd
     raw_data = data + sizeof(VBM_HEADER) + header->num_attribs * sizeof(VBM_ATTRIB_HEADER) + header->num_frames * sizeof(VBM_FRAME_HEADER);
     VBM_ATTRIB_HEADER * attrib_header = (VBM_ATTRIB_HEADER *)(data + sizeof(VBM_HEADER));
     VBM_FRAME_HEADER * frame_header = (VBM_FRAME_HEADER *)(data + sizeof(VBM_HEADER) + header->num_attribs * sizeof(VBM_ATTRIB_HEADER));
-    unsigned int total_data_size = 0;
+    unsigned long total_data_size = 0;
 
     memcpy(&m_header, header, sizeof(VBM_HEADER));
     m_attrib = new VBM_ATTRIB_HEADER[header->num_attribs];
@@ -66,7 +66,7 @@ bool VBObject::LoadFromVBM(const char * filename, int vertexIndex, int normalInd
          else if(attribIndex == 2)
             attribIndex = texCoord0Index;
 
-        glVertexAttribPointer(attribIndex, m_attrib[i].components, m_attrib[i].type, GL_FALSE, 0, (GLvoid *)total_data_size);
+        glVertexAttribPointer(attribIndex, m_attrib[i].components, m_attrib[i].type, GL_FALSE, 0, (GLvoid *)(total_data_size));
         glEnableVertexAttribArray(attribIndex);
         total_data_size += m_attrib[i].components * sizeof(GLfloat) * header->num_vertices;
     }
