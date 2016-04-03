@@ -16,7 +16,6 @@
 
 #define GL_BUFFER_OFFSET(offset) ((void *)(offset))
 
-
 static float aspect = 1.0f;
 
 void reshape(GLFWwindow *window, int width, int height) {

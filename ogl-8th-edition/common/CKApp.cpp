@@ -11,6 +11,12 @@
 
 using namespace std;
 
+CKApplication::CKApplication(const char *title, int width, int height) {
+    this->title = title;
+    this->width = width;
+    this->height = height;
+}
+
 
 void CKApplication::run() {
     
@@ -30,7 +36,7 @@ void CKApplication::run() {
     
     /* Create a window mode window and its OpenGL context */
     aspect = 1.0f;
-    window = glfwCreateWindow(512, 512, title, NULL, NULL);
+    window = glfwCreateWindow(width, height, title, NULL, NULL);
     
     if (!window)
     {
@@ -74,6 +80,8 @@ void CKApplication::run() {
 
 
 void CKApplication::windowSizeDidChange(GLFWwindow *window, int width, int height) {
+    application->width = width;
+    application->height = height;
     
     glViewport(0, 0, width, height);
     

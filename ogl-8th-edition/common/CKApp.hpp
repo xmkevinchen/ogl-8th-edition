@@ -13,16 +13,12 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-
 class CKApplication {
     
 public:
     
-    const char *title;
-    explicit CKApplication(const char *title) {
-        this->title = title;        
-    }
-                    
+    CKApplication(const char *title = "Red Book - OpenGL Application", int width = 512, int height = 512);
+    
     virtual void initialize() = 0;
     virtual void display() = 0;
     virtual void terminate() = 0;
@@ -31,9 +27,14 @@ public:
     void run();
     
 protected:
+    GLFWwindow *window;
+    const char *title;
     float aspect;
-    GLFWwindow *window;        
+    int width;
+    int height;
+    
     static void windowSizeDidChange(GLFWwindow *window, int width, int height);
+    
     
 };
 
