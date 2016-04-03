@@ -15,6 +15,7 @@ CKApplication::CKApplication(const char *title, int width, int height) {
     this->title = title;
     this->width = width;
     this->height = height;
+    this->aspect = float(height) / float(width);
 }
 
 
@@ -34,8 +35,7 @@ void CKApplication::run() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
     
-    /* Create a window mode window and its OpenGL context */
-    aspect = 1.0f;
+    /* Create a window mode window and its OpenGL context */    
     window = glfwCreateWindow(width, height, title, NULL, NULL);
     
     if (!window)
