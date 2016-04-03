@@ -68,13 +68,15 @@ int main(int argc, const char* argv[]) {
     GLuint render_model_matrix = glGetUniformLocation(programID, "model_matrix");
     GLuint render_projection_matrix = glGetUniformLocation(programID, "projection_matrix");
     
-        // 8 corners of a cube, side length 2, centered on the origin
-    static const GLfloat g_vertext_positions[] =
+
+    
+    static const GLfloat g_vertex_positions[] =
     {
-        -1.0f, -1.0f,  0.0f, 1.0f,
-        1.0f, -1.0f,  0.0f, 1.0f,
-        -1.0f,  1.0f,  0.0f, 1.0f,
-        -1.0f, -1.0f,  0.0f, 1.0f,
+        -1.0f, -1.0f, 0.0f, 1.0f,
+         1.0f, -1.0f, 0.0f, 1.0f,
+        -1.0f,  1.0f, 0.0f, 1.0f,
+        -1.0f, -1.0f, 0.0f, 1.0f,
+
     };
     
         // Color for each vertex
@@ -86,10 +88,20 @@ int main(int argc, const char* argv[]) {
         0.0f, 1.0f, 1.0f, 1.0f
     };
     
-        // Indices for the triangle strips
+    /**
+     *  the indices of vertex, for instance drawing triangles from the g_vertex_positions[]
+     *  the first three elements mean, we want to use
+        {-1.0f, -1.0f, 0.0f, 1.0f} as first vertex
+        { 1.0f, -1.0f, 0.0f, 1.0f} as second vertex
+        {-1.0f,  1.0f, 0.0f, 1.0f} as third vertex
+        to draw the triangle,
+     
+        And the 4th to 6th elements mean making up a triangle with the 2nd, 4th, 3rd vertecies of g_vertex_positions
+     
+     */
     static const GLushort g_vertex_indices[] =
     {
-        0, 1, 2
+        0, 1, 2, 1, 3, 2
     };
     
     /* set up element array buffer */
@@ -107,9 +119,12 @@ int main(int argc, const char* argv[]) {
     GLuint vertex_buffer;
     glGenBuffers(1, &vertex_buffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertext_positions) + sizeof(g_vertex_colors), NULL, GL_STATIC_DRAW);
-    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(g_vertext_positions), g_vertext_positions);
-    glBufferSubData(GL_ARRAY_BUFFER, sizeof(g_vertext_positions), sizeof(g_vertex_colors), g_vertex_colors);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_positions) + sizeof(g_vertex_colors), NULL, GL_STATIC_DRAW);
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(g_vertex_positions), g_vertex_positions);
+    glBufferSubData(GL_ARRAY_BUFFER, sizeof(g_vertex_positions), sizeof(g_vertex_colors), g_vertex_colors);
+    
+    
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
@@ -127,11 +142,9 @@ int main(int argc, const char* argv[]) {
                           GL_FLOAT,
                           GL_FALSE,
                           0,
-                          GL_BUFFER_OFFSET(sizeof(g_vertext_positions)));
+                          GL_BUFFER_OFFSET(sizeof(g_vertex_positions)));
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
-    
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
     
     /* Loop until the user close the window */
@@ -148,6 +161,9 @@ int main(int argc, const char* argv[]) {
         
         glUseProgram(programID);
         
+        
+
+        
         glm::mat4 projection_matrix(glm::frustum(-1.0f, 1.0f, -aspect, aspect, 1.0f, 500.0f));
         glUniformMatrix4fv(render_projection_matrix, 1, GL_FALSE, glm::value_ptr(projection_matrix));
         
@@ -155,23 +171,26 @@ int main(int argc, const char* argv[]) {
         model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(-3.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
         glDrawArrays(GL_TRIANGLES, 0, 3);
+        
 
         
-            // DrawElements
+        // DrawElements
         model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, 0.0f, -5.0f));
         glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0));
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, (void *)(0));
 
-//            // DrawElementsBaseVertex
-//        model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(1.0f, 0.0f, -5.0f));
-//        glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
-//        glDrawElementsBaseVertex(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0), 1);
-//
-//            // DrawArraysInstanced
-//        model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(3.0f, 0.0f, -5.0f));
-//        glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
-//        glDrawArraysInstanced(GL_TRIANGLES, 0, 3, 1);
+        // DrawElementsBaseVertex
+        model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(1.0f, 0.0f, -5.0f));
+        glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
+        glDrawElementsBaseVertex(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, GL_BUFFER_OFFSET(0), 1);
 
+            // DrawArraysInstanced
+        model_matrix = glm::translate(glm::mat4(1.0f),glm::vec3(3.0f, 0.0f, -5.0f));
+        glUniformMatrix4fv(render_model_matrix, 1, GL_FALSE, glm::value_ptr(model_matrix));
+        glDrawArraysInstanced(GL_TRIANGLES, 0, 3, 1);
+
+        
+        
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
         
@@ -181,6 +200,7 @@ int main(int argc, const char* argv[]) {
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
+
     glDeleteProgram(programID);
     glDeleteVertexArrays(1, &vertex_array);
     glDeleteBuffers(1, &vertex_buffer);

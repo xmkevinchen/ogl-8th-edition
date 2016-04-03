@@ -22,6 +22,14 @@
 		0A5FC3DA1CACEA1800A178B5 /* instancing.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3D81CACE77F00A178B5 /* instancing.fragment */; };
 		0A5FC3DC1CACEA3E00A178B5 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
 		0A5FC3DD1CACF87E00A178B5 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		0A5FC3E11CAE2B7800A178B5 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		0A5FC3E41CAE2B7800A178B5 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A5FC3F01CAE2BCD00A178B5 /* pointsprites.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3EE1CAE2BCD00A178B5 /* pointsprites.cpp */; };
+		0A6EB6361CAE42EE005DA4C6 /* tga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6341CAE42EE005DA4C6 /* tga.cpp */; };
+		0A6EB6391CAE46A3005DA4C6 /* sprite.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6371CAE4696005DA4C6 /* sprite.tga */; };
+		0A6EB63A1CAE46A4005DA4C6 /* sprite2.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6381CAE4696005DA4C6 /* sprite2.tga */; };
+		0A6EB63D1CAE49BC005DA4C6 /* pointsprites.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB63B1CAE48CD005DA4C6 /* pointsprites.fragment */; };
+		0A6EB63E1CAE49BC005DA4C6 /* pointsprites.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB63C1CAE4923005DA4C6 /* pointsprites.vertex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +67,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A5FC3E61CAE2B7800A178B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0A6EB63D1CAE49BC005DA4C6 /* pointsprites.fragment in CopyFiles */,
+				0A6EB63E1CAE49BC005DA4C6 /* pointsprites.vertex in CopyFiles */,
+				0A6EB6391CAE46A3005DA4C6 /* sprite.tga in CopyFiles */,
+				0A6EB63A1CAE46A4005DA4C6 /* sprite2.tga in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +104,15 @@
 		0A5FC3D71CACE72400A178B5 /* instancing.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing.vertex; sourceTree = "<group>"; };
 		0A5FC3D81CACE77F00A178B5 /* instancing.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing.fragment; sourceTree = "<group>"; };
 		0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = armadillo_low.vbm; sourceTree = "<group>"; };
+		0A5FC3ED1CAE2B7800A178B5 /* ch03-pointsprites */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch03-pointsprites"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5FC3EE1CAE2BCD00A178B5 /* pointsprites.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pointsprites.cpp; sourceTree = "<group>"; };
+		0A5FC3EF1CAE2BCD00A178B5 /* pointsprites.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pointsprites.hpp; sourceTree = "<group>"; };
+		0A6EB6341CAE42EE005DA4C6 /* tga.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tga.cpp; sourceTree = "<group>"; };
+		0A6EB6351CAE42EE005DA4C6 /* tga.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tga.hpp; sourceTree = "<group>"; };
+		0A6EB6371CAE4696005DA4C6 /* sprite.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = sprite.tga; sourceTree = "<group>"; };
+		0A6EB6381CAE4696005DA4C6 /* sprite2.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = sprite2.tga; sourceTree = "<group>"; };
+		0A6EB63B1CAE48CD005DA4C6 /* pointsprites.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = pointsprites.fragment; sourceTree = "<group>"; };
+		0A6EB63C1CAE4923005DA4C6 /* pointsprites.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = pointsprites.vertex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +137,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A5FC3E51CAE2B7800A178B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,6 +161,7 @@
 				0A5235FB1CAA3A9400ED5AAA /* triangles */,
 				0A5236151CAA531100ED5AAA /* ch03-drawcommands */,
 				0A5FC3CF1CACD09000A178B5 /* ch03-instancing */,
+				0A5FC3ED1CAE2B7800A178B5 /* ch03-pointsprites */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +190,7 @@
 		0A5235F31CAA3A4200ED5AAA /* ch03 */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FC3DE1CAE2B7100A178B5 /* pointsprites */,
 				0A5FC3D11CACD0D400A178B5 /* instancing */,
 				0A52361B1CAA54C100ED5AAA /* shaders */,
 				0A5236181CAA54B800ED5AAA /* drawcommands */,
@@ -164,11 +203,13 @@
 			children = (
 				0A5235F51CAA3A6A00ED5AAA /* shader.hpp */,
 				0A5235F61CAA3A6A00ED5AAA /* shader.cpp */,
-				0A5FC3C11CACD06100A178B5 /* vbm.h */,
 				0A5FC3C21CACD06100A178B5 /* vutils.h */,
+				0A5FC3C11CACD06100A178B5 /* vbm.h */,
 				0A5FC3C31CACD06100A178B5 /* vbm.cpp */,
 				0A5FC3D51CACD23E00A178B5 /* CKApp.hpp */,
 				0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */,
+				0A6EB6341CAE42EE005DA4C6 /* tga.cpp */,
+				0A6EB6351CAE42EE005DA4C6 /* tga.hpp */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -199,6 +240,19 @@
 				0A5FC3D81CACE77F00A178B5 /* instancing.fragment */,
 			);
 			path = instancing;
+			sourceTree = "<group>";
+		};
+		0A5FC3DE1CAE2B7100A178B5 /* pointsprites */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FC3EE1CAE2BCD00A178B5 /* pointsprites.cpp */,
+				0A5FC3EF1CAE2BCD00A178B5 /* pointsprites.hpp */,
+				0A6EB6371CAE4696005DA4C6 /* sprite.tga */,
+				0A6EB6381CAE4696005DA4C6 /* sprite2.tga */,
+				0A6EB63B1CAE48CD005DA4C6 /* pointsprites.fragment */,
+				0A6EB63C1CAE4923005DA4C6 /* pointsprites.vertex */,
+			);
+			path = pointsprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +309,23 @@
 			productReference = 0A5FC3CF1CACD09000A178B5 /* ch03-instancing */;
 			productType = "com.apple.product-type.tool";
 		};
+		0A5FC3DF1CAE2B7800A178B5 /* ch03-pointsprites */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FC3EA1CAE2B7800A178B5 /* Build configuration list for PBXNativeTarget "ch03-pointsprites" */;
+			buildPhases = (
+				0A5FC3E01CAE2B7800A178B5 /* Sources */,
+				0A5FC3E51CAE2B7800A178B5 /* Frameworks */,
+				0A5FC3E61CAE2B7800A178B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch03-pointsprites";
+			productName = triangles;
+			productReference = 0A5FC3ED1CAE2B7800A178B5 /* ch03-pointsprites */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,6 +355,7 @@
 				0A5235FA1CAA3A9400ED5AAA /* triangles */,
 				0A52360A1CAA531100ED5AAA /* ch03-drawcommands */,
 				0A5FC3C41CACD09000A178B5 /* ch03-instancing */,
+				0A5FC3DF1CAE2B7800A178B5 /* ch03-pointsprites */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +387,17 @@
 				0A5FC3D01CACD0B400A178B5 /* vbm.cpp in Sources */,
 				0A5FC3D31CACD0F800A178B5 /* ch03_instancing.cpp in Sources */,
 				0A5FC3D61CACD23E00A178B5 /* CKApp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FC3E01CAE2B7800A178B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6EB6361CAE42EE005DA4C6 /* tga.cpp in Sources */,
+				0A5FC3E11CAE2B7800A178B5 /* shader.cpp in Sources */,
+				0A5FC3E41CAE2B7800A178B5 /* CKApp.cpp in Sources */,
+				0A5FC3F01CAE2BCD00A178B5 /* pointsprites.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +623,52 @@
 			};
 			name = Release;
 		};
+		0A5FC3EB1CAE2B7800A178B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A5FC3EC1CAE2B7800A178B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +704,15 @@
 			buildConfigurations = (
 				0A5FC3CD1CACD09000A178B5 /* Debug */,
 				0A5FC3CE1CACD09000A178B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5FC3EA1CAE2B7800A178B5 /* Build configuration list for PBXNativeTarget "ch03-pointsprites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FC3EB1CAE2B7800A178B5 /* Debug */,
+				0A5FC3EC1CAE2B7800A178B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
