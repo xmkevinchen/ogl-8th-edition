@@ -41,9 +41,6 @@ protected:
     GLuint weight_vertex_buffer;
     GLuint color_vertex_buffer;
     
-private:
-    float aspect;
-    
 };
 
 void InstancingApp::initialize() {
@@ -72,11 +69,6 @@ void InstancingApp::initialize() {
         colors[i][3] = 1.0f;
         
     }
-    
-    int width = 0;
-    int height = 0;
-    glfwGetWindowSize(window, &width, &height);
-    aspect = float(height) / float(width);
     
     /* Create and allocate the VBO to hold the weights
      * Notice that we use the 'colors' array as the initial data,
@@ -162,9 +154,7 @@ void InstancingApp::terminate() {
     object.Free();
 }
 
-void InstancingApp::resize(int width, int height) {
-    aspect = float(height) / float(width);
-}
+void InstancingApp::resize(int width, int height) {}
 
 
 int main(int argc, const char* argv[]) {

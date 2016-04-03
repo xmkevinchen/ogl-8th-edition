@@ -7,8 +7,7 @@
 //
 
 #include "CKApp.hpp"
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+
 
 using namespace std;
 
@@ -30,7 +29,9 @@ void CKApplication::run() {
     
     
     /* Create a window mode window and its OpenGL context */
+    aspect = 1.0f;
     window = glfwCreateWindow(512, 512, title, NULL, NULL);
+    
     if (!window)
     {
         glfwTerminate();
@@ -68,11 +69,15 @@ void CKApplication::run() {
     
     terminate();
     glfwTerminate();
+    application = NULL;
 }
+
 
 void CKApplication::windowSizeDidChange(GLFWwindow *window, int width, int height) {
     
     glViewport(0, 0, width, height);
+    
+    application->aspect = float(height) / float(width);
     application->resize(width, height);
     
 }

@@ -10,9 +10,9 @@
 #define CKApp_hpp
 
 #include <iostream>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
-
-class GLFWwindow;
 
 class CKApplication {
     
@@ -31,6 +31,7 @@ public:
     void run();
     
 protected:
+    float aspect;
     GLFWwindow *window;        
     static void windowSizeDidChange(GLFWwindow *window, int width, int height);
     
