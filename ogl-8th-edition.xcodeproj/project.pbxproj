@@ -48,6 +48,8 @@
 		0A6EB66D1CB234C3005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
 		0A6EB6721CB234C3005DA4C6 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
 		0A6EB6781CB23508005DA4C6 /* ch03_instancing3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6771CB23508005DA4C6 /* ch03_instancing3.cpp */; };
+		91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6791CB23697005DA4C6 /* instancing3.vertex */; };
+		91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +129,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */,
+				91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */,
 				0A6EB6721CB234C3005DA4C6 /* armadillo_low.vbm in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

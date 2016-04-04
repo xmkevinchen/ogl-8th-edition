@@ -1,4 +1,4 @@
-#version 410
+#version 330
 
 layout (location = 0) in vec4 position;
 layout (location = 1) in vec3 normal;
@@ -11,11 +11,12 @@ uniform samplerBuffer color_texture_buffer_objects;
 uniform samplerBuffer model_matrix_texture_buffer_objects;
 
 out VERTEX {
-    vec3 normal;
-    vec4 color;
+    vec3    normal;
+    vec4    color;
 } vertex;
 
 void main(void) {
+    
     vec4 color = texelFetch(color_texture_buffer_objects, gl_InstanceID);
     
     /**
