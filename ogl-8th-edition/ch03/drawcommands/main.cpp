@@ -62,12 +62,11 @@ int main(int argc, const char* argv[]) {
     
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
     
-    GLuint programID = LoadShaders("primitive_restart.vertex", "primitive_restart.fragment");
-    glUseProgram(programID);
-    GLuint render_model_matrix = glGetUniformLocation(programID, "model_matrix");
-    GLuint render_projection_matrix = glGetUniformLocation(programID, "projection_matrix");
+    Loader::Shader *shader = new Loader::Shader("primitive_restart.vertex", "primitive_restart.fragment");
+    shader->use();
+    GLuint render_model_matrix = glGetUniformLocation(shader->program, "model_matrix");
+    GLuint render_projection_matrix = glGetUniformLocation(shader->program, "projection_matrix");
     
-
     
     static const GLfloat g_vertex_positions[] =
     {
@@ -158,11 +157,7 @@ int main(int argc, const char* argv[]) {
         
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        glUseProgram(programID);
-        
-        
 
-        
         glm::mat4 projection_matrix(glm::frustum(-1.0f, 1.0f, -aspect, aspect, 1.0f, 500.0f));
         glUniformMatrix4fv(render_projection_matrix, 1, GL_FALSE, glm::value_ptr(projection_matrix));
         
@@ -200,7 +195,7 @@ int main(int argc, const char* argv[]) {
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
 
-    glDeleteProgram(programID);
+    glDeleteProgram(shader->program);
     glDeleteVertexArrays(1, &vertex_array);
     glDeleteBuffers(1, &vertex_buffer);
     glDeleteBuffers(1, &element_buffer);

@@ -18,6 +18,7 @@
 #include "shader.hpp"
 
 using namespace glm;
+using namespace Loader;
 
 #define INSTANCE_COUNT 200
 
@@ -33,7 +34,7 @@ public:
     virtual void resize(int width, int height);
     
 protected:
-    GLuint programID;
+    Shader *shader;
     GLuint vertex_model_matrix;
     GLuint vertex_projection_matrix;
     VBObject object;
@@ -44,12 +45,11 @@ protected:
 };
 
 void InstancingApp::initialize() {
+    shader = new Shader("instancing.vertex", "instancing.fragment");
+    shader->use();
     
-    programID = LoadShaders("instancing.vertex", "instancing.fragment");
-    glUseProgram(programID);
-    
-    vertex_model_matrix = glGetUniformLocation(programID, "model_matrix");
-    vertex_projection_matrix = glGetUniformLocation(programID, "projection_matrix");
+    vertex_model_matrix = glGetUniformLocation(shader->program, "model_matrix");
+    vertex_projection_matrix = glGetUniformLocation(shader->program, "projection_matrix");
     
     object.LoadFromVBM("armadillo_low.vbm", 0, 1, 2);
     
@@ -124,7 +124,7 @@ void InstancingApp::display() {
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     
-    glUseProgram(programID);
+    shader->use();
     
     mat4 model_matrix[4];
     for (int n = 0; n < 4; n++) {
@@ -148,7 +148,7 @@ void InstancingApp::display() {
 
 void InstancingApp::terminate() {
     
-    glDeleteProgram(programID);
+    glDeleteProgram(shader->program);
     glDeleteBuffers(1, &weight_vertex_buffer);
     glDeleteBuffers(1, &color_vertex_buffer);
     object.Free();

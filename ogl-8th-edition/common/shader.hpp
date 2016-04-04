@@ -9,10 +9,16 @@
 #ifndef shader_hpp
 #define shader_hpp
 
-#include <stdio.h>
 #include <GL/glew.h>
 
-GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path);
+namespace Loader {
+    class Shader {
+    public:
+        GLuint program;
+        Shader(const GLchar *vertex_file_path, const GLchar *fragment_file_path);
+        void use();
+    };
+}
 
 
 #endif /* shader_hpp */

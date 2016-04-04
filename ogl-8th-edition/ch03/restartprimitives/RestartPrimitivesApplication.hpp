@@ -10,6 +10,7 @@
 #define RestartPrimitivesApplication_hpp
 
 #include "CKApp.hpp"
+#include "shader.hpp"
 
 class RestartPrimitivesApplication: public CKApplication {
     
@@ -25,9 +26,12 @@ private:
     GLuint cube_vertex_buffer;
     GLuint cube_element_buffer;
     
-    GLuint program_id;
+    Loader::Shader *shader;
     GLuint shader_model_matrix;
     GLuint shader_projection_matrix;
+    
+    
+    
 };
 
 #endif /* RestartPrimitivesApplication_hpp */

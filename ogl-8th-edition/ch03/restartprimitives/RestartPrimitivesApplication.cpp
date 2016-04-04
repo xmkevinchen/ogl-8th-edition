@@ -45,12 +45,11 @@ static const GLushort cube_indices[] = {
 
 void RestartPrimitivesApplication::initialize() {
     
+    shader = new Loader::Shader("primitive_restart.vertex", "primitive_restart.fragment");
+    shader->use();
     
-    program_id = LoadShaders("primitive_restart.vertex", "primitive_restart.fragment");
-    glUseProgram(program_id);
-    
-    shader_model_matrix = glGetUniformLocation(program_id, "model_matrix");
-    shader_projection_matrix = glGetUniformLocation(program_id, "projection_matrix");
+    shader_model_matrix = glGetUniformLocation(shader->program, "model_matrix");
+    shader_projection_matrix = glGetUniformLocation(shader->program, "projection_matrix");
     
     glGenBuffers(1, &cube_element_buffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, cube_element_buffer);
@@ -84,7 +83,7 @@ void RestartPrimitivesApplication::display() {
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    glUseProgram(program_id);
+    shader->use();
     
     glm::mat4 model_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -5.0f))
     * glm::rotate(glm::mat4(1.0f), degree_to_radian(t * 360.0f), glm::vec3(0.0f, 1.0f, 0.0f))
@@ -116,7 +115,7 @@ void RestartPrimitivesApplication::terminate() {
     
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
-    glDeleteProgram(program_id);
+    glDeleteProgram(shader->program);
     glDeleteVertexArrays(1, &cube_vertex_array);
     glDeleteBuffers(1, &cube_element_buffer);
     glDeleteBuffers(1, &cube_vertex_buffer);

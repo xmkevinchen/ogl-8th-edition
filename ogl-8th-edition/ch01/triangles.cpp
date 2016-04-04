@@ -54,7 +54,7 @@ int main(int argc, const char * argv[]) {
     glGenVertexArrays(1, &VertexArrayID);
     glBindVertexArray(VertexArrayID);
     
-    GLuint programID = LoadShaders("triangles.vertex", "triangles.fragment");
+    Loader::Shader *shader = new Loader::Shader("triangles.vertex", "triangles.fragment");
     
     static const GLfloat g_vertext_buffer_data[] = {
          -0.90, -0.90,  // Triangle 1
@@ -92,7 +92,7 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT);
         
         /* Use shader */
-        glUseProgram(programID);
+        glUseProgram(shader->program);
         
         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
         
@@ -110,7 +110,7 @@ int main(int argc, const char * argv[]) {
     
     glDeleteBuffers(1, &vertexbuffer);
     glDeleteVertexArrays(1, &VertexArrayID);
-    glDeleteProgram(programID);
+    glDeleteProgram(shader->program);
     
     glfwTerminate();
     
