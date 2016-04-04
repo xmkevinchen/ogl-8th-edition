@@ -159,7 +159,7 @@ void InstancingApp::resize(int width, int height) {}
 
 int main(int argc, const char* argv[]) {
     
-    InstancingApp *app = new InstancingApp("Red Book - Ch03 Instancing", 256, 256);
+    InstancingApp *app = new InstancingApp("Red Book - Ch03 Instancing");
     app->run();
     
     return 0;
