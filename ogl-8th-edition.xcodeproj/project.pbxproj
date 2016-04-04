@@ -35,6 +35,19 @@
 		0A6EB6481CB1DACB005DA4C6 /* primitive_restart.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A52361D1CAA557600ED5AAA /* primitive_restart.fragment */; };
 		0A6EB6501CB1DB48005DA4C6 /* RestartPrimitivesApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB64E1CB1DB48005DA4C6 /* RestartPrimitivesApplication.cpp */; };
 		0A6EB6511CB1DB68005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A6EB6561CB2214F005DA4C6 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		0A6EB6571CB2214F005DA4C6 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
+		0A6EB6591CB2214F005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A6EB65C1CB2214F005DA4C6 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
+		0A6EB6631CB2217A005DA4C6 /* instancing2.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6521CB21EEE005DA4C6 /* instancing2.vertex */; };
+		0A6EB6641CB2217A005DA4C6 /* instancing2.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6531CB2209D005DA4C6 /* instancing2.fragment */; };
+		0A6EB6661CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */; };
+		0A6EB6671CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */; };
+		0A6EB66A1CB234C3005DA4C6 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		0A6EB66B1CB234C3005DA4C6 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
+		0A6EB66D1CB234C3005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A6EB6721CB234C3005DA4C6 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
+		0A6EB6781CB23508005DA4C6 /* ch03_instancing3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6771CB23508005DA4C6 /* ch03_instancing3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,6 +109,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A6EB65B1CB2214F005DA4C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0A6EB6631CB2217A005DA4C6 /* instancing2.vertex in CopyFiles */,
+				0A6EB6641CB2217A005DA4C6 /* instancing2.fragment in CopyFiles */,
+				0A6EB65C1CB2214F005DA4C6 /* armadillo_low.vbm in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6EB66F1CB234C3005DA4C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0A6EB6721CB234C3005DA4C6 /* armadillo_low.vbm in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +167,14 @@
 		0A6EB64C1CB1DACB005DA4C6 /* ch03-restart-primitives */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch03-restart-primitives"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6EB64E1CB1DB48005DA4C6 /* RestartPrimitivesApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RestartPrimitivesApplication.cpp; sourceTree = "<group>"; };
 		0A6EB64F1CB1DB48005DA4C6 /* RestartPrimitivesApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RestartPrimitivesApplication.hpp; sourceTree = "<group>"; };
+		0A6EB6521CB21EEE005DA4C6 /* instancing2.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing2.vertex; sourceTree = "<group>"; };
+		0A6EB6531CB2209D005DA4C6 /* instancing2.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing2.fragment; sourceTree = "<group>"; };
+		0A6EB6621CB2214F005DA4C6 /* ch03-instancing-2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch03-instancing-2"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch03_instancing2.cpp; sourceTree = "<group>"; };
+		0A6EB6761CB234C3005DA4C6 /* ch03-instancing-3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch03-instancing-3"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6EB6771CB23508005DA4C6 /* ch03_instancing3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch03_instancing3.cpp; sourceTree = "<group>"; };
+		0A6EB6791CB23697005DA4C6 /* instancing3.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing3.vertex; sourceTree = "<group>"; };
+		0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = instancing3.fragment; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +213,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A6EB65A1CB2214F005DA4C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6EB66E1CB234C3005DA4C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -189,6 +246,8 @@
 				0A5FC3CF1CACD09000A178B5 /* ch03-instancing */,
 				0A5FC3ED1CAE2B7800A178B5 /* ch03-pointsprites */,
 				0A6EB64C1CB1DACB005DA4C6 /* ch03-restart-primitives */,
+				0A6EB6621CB2214F005DA4C6 /* ch03-instancing-2 */,
+				0A6EB6761CB234C3005DA4C6 /* ch03-instancing-3 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +325,12 @@
 				0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */,
 				0A5FC3D71CACE72400A178B5 /* instancing.vertex */,
 				0A5FC3D81CACE77F00A178B5 /* instancing.fragment */,
+				0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */,
+				0A6EB6521CB21EEE005DA4C6 /* instancing2.vertex */,
+				0A6EB6531CB2209D005DA4C6 /* instancing2.fragment */,
+				0A6EB6771CB23508005DA4C6 /* ch03_instancing3.cpp */,
+				0A6EB6791CB23697005DA4C6 /* instancing3.vertex */,
+				0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */,
 			);
 			path = instancing;
 			sourceTree = "<group>";
@@ -380,6 +445,40 @@
 			productReference = 0A6EB64C1CB1DACB005DA4C6 /* ch03-restart-primitives */;
 			productType = "com.apple.product-type.tool";
 		};
+		0A6EB6541CB2214F005DA4C6 /* ch03-instancing-2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6EB65F1CB2214F005DA4C6 /* Build configuration list for PBXNativeTarget "ch03-instancing-2" */;
+			buildPhases = (
+				0A6EB6551CB2214F005DA4C6 /* Sources */,
+				0A6EB65A1CB2214F005DA4C6 /* Frameworks */,
+				0A6EB65B1CB2214F005DA4C6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch03-instancing-2";
+			productName = triangles;
+			productReference = 0A6EB6621CB2214F005DA4C6 /* ch03-instancing-2 */;
+			productType = "com.apple.product-type.tool";
+		};
+		0A6EB6681CB234C3005DA4C6 /* ch03-instancing-3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6EB6731CB234C3005DA4C6 /* Build configuration list for PBXNativeTarget "ch03-instancing-3" */;
+			buildPhases = (
+				0A6EB6691CB234C3005DA4C6 /* Sources */,
+				0A6EB66E1CB234C3005DA4C6 /* Frameworks */,
+				0A6EB66F1CB234C3005DA4C6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch03-instancing-3";
+			productName = triangles;
+			productReference = 0A6EB6761CB234C3005DA4C6 /* ch03-instancing-3 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -408,9 +507,11 @@
 			targets = (
 				0A5235FA1CAA3A9400ED5AAA /* triangles */,
 				0A52360A1CAA531100ED5AAA /* ch03-drawcommands */,
-				0A5FC3C41CACD09000A178B5 /* ch03-instancing */,
 				0A5FC3DF1CAE2B7800A178B5 /* ch03-pointsprites */,
 				0A6EB6411CB1DACB005DA4C6 /* ch03-restart-primitives */,
+				0A5FC3C41CACD09000A178B5 /* ch03-instancing */,
+				0A6EB6541CB2214F005DA4C6 /* ch03-instancing-2 */,
+				0A6EB6681CB234C3005DA4C6 /* ch03-instancing-3 */,
 			);
 		};
 /* End PBXProject section */
@@ -462,7 +563,30 @@
 			files = (
 				0A6EB6511CB1DB68005DA4C6 /* CKApp.cpp in Sources */,
 				0A6EB6501CB1DB48005DA4C6 /* RestartPrimitivesApplication.cpp in Sources */,
+				0A6EB6671CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */,
 				0A6EB6441CB1DACB005DA4C6 /* shader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6EB6551CB2214F005DA4C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6EB6561CB2214F005DA4C6 /* shader.cpp in Sources */,
+				0A6EB6571CB2214F005DA4C6 /* vbm.cpp in Sources */,
+				0A6EB6661CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */,
+				0A6EB6591CB2214F005DA4C6 /* CKApp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6EB6691CB234C3005DA4C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6EB66A1CB234C3005DA4C6 /* shader.cpp in Sources */,
+				0A6EB66B1CB234C3005DA4C6 /* vbm.cpp in Sources */,
+				0A6EB66D1CB234C3005DA4C6 /* CKApp.cpp in Sources */,
+				0A6EB6781CB23508005DA4C6 /* ch03_instancing3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +904,98 @@
 			};
 			name = Release;
 		};
+		0A6EB6601CB2214F005DA4C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A6EB6611CB2214F005DA4C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0A6EB6741CB234C3005DA4C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A6EB6751CB234C3005DA4C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -833,6 +1049,24 @@
 			buildConfigurations = (
 				0A6EB64A1CB1DACB005DA4C6 /* Debug */,
 				0A6EB64B1CB1DACB005DA4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6EB65F1CB2214F005DA4C6 /* Build configuration list for PBXNativeTarget "ch03-instancing-2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6EB6601CB2214F005DA4C6 /* Debug */,
+				0A6EB6611CB2214F005DA4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6EB6731CB234C3005DA4C6 /* Build configuration list for PBXNativeTarget "ch03-instancing-3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6EB6741CB234C3005DA4C6 /* Debug */,
+				0A6EB6751CB234C3005DA4C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
