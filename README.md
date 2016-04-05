@@ -10,3 +10,8 @@
 ## Progress
 2016.4.2 -- Chapter 03 Draw commands  
 2016.4.3 -- Chapter 03 Restarting Primitives  
+2016.4.4 -- Chapter 03 Instancing
+
+
+---
+Bear with my C++ syntax :]

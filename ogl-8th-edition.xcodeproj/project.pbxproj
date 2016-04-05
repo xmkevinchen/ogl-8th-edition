@@ -42,7 +42,6 @@
 		0A6EB6631CB2217A005DA4C6 /* instancing2.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6521CB21EEE005DA4C6 /* instancing2.vertex */; };
 		0A6EB6641CB2217A005DA4C6 /* instancing2.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6531CB2209D005DA4C6 /* instancing2.fragment */; };
 		0A6EB6661CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */; };
-		0A6EB6671CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB6651CB2218D005DA4C6 /* ch03_instancing2.cpp */; };
 		0A6EB66A1CB234C3005DA4C6 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
 		0A6EB66B1CB234C3005DA4C6 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
 		0A6EB66D1CB234C3005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
@@ -567,7 +566,6 @@
 			files = (
 				0A6EB6511CB1DB68005DA4C6 /* CKApp.cpp in Sources */,
 				0A6EB6501CB1DB48005DA4C6 /* RestartPrimitivesApplication.cpp in Sources */,
-				0A6EB6671CB2218D005DA4C6 /* ch03_instancing2.cpp in Sources */,
 				0A6EB6441CB1DACB005DA4C6 /* shader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
