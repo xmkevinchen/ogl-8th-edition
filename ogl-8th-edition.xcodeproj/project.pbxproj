@@ -52,6 +52,15 @@
 		0A6EB68B1CB38CB8005DA4C6 /* gouraud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB68A1CB38CB8005DA4C6 /* gouraud.cpp */; };
 		0A6EB68E1CB39157005DA4C6 /* gouraud.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB68C1CB38D50005DA4C6 /* gouraud.vertex */; };
 		0A6EB68F1CB39157005DA4C6 /* gouraud.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB68D1CB38D92005DA4C6 /* gouraud.fragment */; };
+		0A6EB6931CB4CE6A005DA4C6 /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		0A6EB6941CB4CE6A005DA4C6 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		0A6EB69F1CB4CEA8005DA4C6 /* shadowmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EB69E1CB4CEA8005DA4C6 /* shadowmap.cpp */; };
+		0A6EB6A41CB4DC72005DA4C6 /* armadillo_low.vbm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A5FC3DB1CACEA3B00A178B5 /* armadillo_low.vbm */; };
+		0A6EB6A51CB4DC7A005DA4C6 /* shadowmap_light.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A01CB4D08F005DA4C6 /* shadowmap_light.vertex */; };
+		0A6EB6A61CB4DC7A005DA4C6 /* shadowmap_light.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A11CB4D0C4005DA4C6 /* shadowmap_light.fragment */; };
+		0A6EB6A71CB4DC7A005DA4C6 /* shadowmap_scene.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A21CB4D0F3005DA4C6 /* shadowmap_scene.vertex */; };
+		0A6EB6A81CB4DC7A005DA4C6 /* shadowmap_scene.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */; };
+		0A6EB6A91CB4E11F005DA4C6 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
 		91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6791CB23697005DA4C6 /* instancing3.vertex */; };
 		91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */; };
 /* End PBXBuildFile section */
@@ -150,6 +159,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A6EB6971CB4CE6A005DA4C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0A6EB6A51CB4DC7A005DA4C6 /* shadowmap_light.vertex in CopyFiles */,
+				0A6EB6A61CB4DC7A005DA4C6 /* shadowmap_light.fragment in CopyFiles */,
+				0A6EB6A71CB4DC7A005DA4C6 /* shadowmap_scene.vertex in CopyFiles */,
+				0A6EB6A81CB4DC7A005DA4C6 /* shadowmap_scene.fragment in CopyFiles */,
+				0A6EB6A41CB4DC72005DA4C6 /* armadillo_low.vbm in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +221,12 @@
 		0A6EB68A1CB38CB8005DA4C6 /* gouraud.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gouraud.cpp; sourceTree = "<group>"; };
 		0A6EB68C1CB38D50005DA4C6 /* gouraud.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gouraud.vertex; sourceTree = "<group>"; };
 		0A6EB68D1CB38D92005DA4C6 /* gouraud.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gouraud.fragment; sourceTree = "<group>"; };
+		0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch04-shadowmap"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6EB69E1CB4CEA8005DA4C6 /* shadowmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shadowmap.cpp; sourceTree = "<group>"; };
+		0A6EB6A01CB4D08F005DA4C6 /* shadowmap_light.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_light.vertex; sourceTree = "<group>"; };
+		0A6EB6A11CB4D0C4005DA4C6 /* shadowmap_light.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_light.fragment; sourceTree = "<group>"; };
+		0A6EB6A21CB4D0F3005DA4C6 /* shadowmap_scene.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_scene.vertex; sourceTree = "<group>"; };
+		0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_scene.fragment; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +286,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A6EB6961CB4CE6A005DA4C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -279,6 +315,7 @@
 				0A6EB6621CB2214F005DA4C6 /* ch03-instancing-2 */,
 				0A6EB6761CB234C3005DA4C6 /* ch03-instancing-3 */,
 				0A6EB6891CB38C6F005DA4C6 /* ch04-gouraud */,
+				0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				0A6EB67C1CB38C53005DA4C6 /* gouraud */,
+				0A6EB6901CB4CE62005DA4C6 /* shadowmap */,
 			);
 			path = ch04;
 			sourceTree = "<group>";
@@ -405,6 +443,18 @@
 				0A6EB68D1CB38D92005DA4C6 /* gouraud.fragment */,
 			);
 			path = gouraud;
+			sourceTree = "<group>";
+		};
+		0A6EB6901CB4CE62005DA4C6 /* shadowmap */ = {
+			isa = PBXGroup;
+			children = (
+				0A6EB69E1CB4CEA8005DA4C6 /* shadowmap.cpp */,
+				0A6EB6A01CB4D08F005DA4C6 /* shadowmap_light.vertex */,
+				0A6EB6A11CB4D0C4005DA4C6 /* shadowmap_light.fragment */,
+				0A6EB6A21CB4D0F3005DA4C6 /* shadowmap_scene.vertex */,
+				0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */,
+			);
+			path = shadowmap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +596,23 @@
 			productReference = 0A6EB6891CB38C6F005DA4C6 /* ch04-gouraud */;
 			productType = "com.apple.product-type.tool";
 		};
+		0A6EB6911CB4CE6A005DA4C6 /* ch04-shadowmap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6EB69A1CB4CE6A005DA4C6 /* Build configuration list for PBXNativeTarget "ch04-shadowmap" */;
+			buildPhases = (
+				0A6EB6921CB4CE6A005DA4C6 /* Sources */,
+				0A6EB6961CB4CE6A005DA4C6 /* Frameworks */,
+				0A6EB6971CB4CE6A005DA4C6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch04-shadowmap";
+			productName = triangles;
+			productReference = 0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -580,6 +647,7 @@
 				0A6EB6541CB2214F005DA4C6 /* ch03-instancing-2 */,
 				0A6EB6681CB234C3005DA4C6 /* ch03-instancing-3 */,
 				0A6EB67D1CB38C6F005DA4C6 /* ch04-gouraud */,
+				0A6EB6911CB4CE6A005DA4C6 /* ch04-shadowmap */,
 			);
 		};
 /* End PBXProject section */
@@ -664,6 +732,17 @@
 				0A6EB67F1CB38C6F005DA4C6 /* CKApp.cpp in Sources */,
 				0A6EB6811CB38C6F005DA4C6 /* shader.cpp in Sources */,
 				0A6EB68B1CB38CB8005DA4C6 /* gouraud.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6EB6921CB4CE6A005DA4C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6EB6A91CB4E11F005DA4C6 /* vbm.cpp in Sources */,
+				0A6EB6931CB4CE6A005DA4C6 /* CKApp.cpp in Sources */,
+				0A6EB6941CB4CE6A005DA4C6 /* shader.cpp in Sources */,
+				0A6EB69F1CB4CEA8005DA4C6 /* shadowmap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,6 +1198,52 @@
 			};
 			name = Release;
 		};
+		0A6EB69B1CB4CE6A005DA4C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A6EB69C1CB4CE6A005DA4C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1199,6 +1324,15 @@
 			buildConfigurations = (
 				0A6EB6871CB38C6F005DA4C6 /* Debug */,
 				0A6EB6881CB38C6F005DA4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6EB69A1CB4CE6A005DA4C6 /* Build configuration list for PBXNativeTarget "ch04-shadowmap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6EB69B1CB4CE6A005DA4C6 /* Debug */,
+				0A6EB69C1CB4CE6A005DA4C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
