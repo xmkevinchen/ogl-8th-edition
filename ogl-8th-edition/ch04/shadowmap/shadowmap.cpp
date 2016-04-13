@@ -101,9 +101,9 @@ public:
     
         float t = float(glfwGetTimerValue() & 0xFFFF) / float(0xFFFF);
 //        float t = float(glfwGetTimerFrequency());
-        vec3 light_position = vec3(sin(t * 6.0f * float(M_PI)) * 300.0f,
+        vec3 light_position = vec3(sin(t * 6.0f * float(M_PI)) * 300.0f / 180.0f,
                                    200.f,
-                                   cos(t * 4.0f * float(M_PI)) * 100.0f + 250.0f);
+                                   cos(t * 4.0f * float(M_PI)) * 100.0f / 180.0f + 250.0f);
         glEnable(GL_CULL_FACE);
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LEQUAL);
@@ -113,7 +113,7 @@ public:
         static const vec3 Z(0.0f, 0.0f, 1.0f);
         
         // Matrices for rendering the scene
-        mat4 scene_model_matrix = rotate(mat4(1.0f), t * 720.0f, Y);
+        mat4 scene_model_matrix = rotate(mat4(1.0f), t * 720.0f * float(M_PI) / 180.0f, Y);
         mat4 scene_view_matrix = translate(mat4(1.0), vec3(0.0f, 0.0f, -300.0f));
         mat4 scene_projection_matrix = frustum(-1.0f, 1.0f, -aspect, aspect, 1.0f, 800.0f);
         const mat4 scale_bias_matrix = mat4(vec4(0.5f, 0.0f, 0.0f, 0.0f),

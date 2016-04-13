@@ -61,6 +61,11 @@
 		0A6EB6A71CB4DC7A005DA4C6 /* shadowmap_scene.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A21CB4D0F3005DA4C6 /* shadowmap_scene.vertex */; };
 		0A6EB6A81CB4DC7A005DA4C6 /* shadowmap_scene.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */; };
 		0A6EB6A91CB4E11F005DA4C6 /* vbm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3C31CACD06100A178B5 /* vbm.cpp */; };
+		9172E4EB1CBDBC9200B1641E /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		9172E4F51CBDBCC300B1641E /* ch06_static_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E4F41CBDBCC300B1641E /* ch06_static_texture.cpp */; };
+		9172E4F81CBDBEEC00B1641E /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		9172E4F91CBDC27C00B1641E /* static_texture.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F61CBDBD4900B1641E /* static_texture.vertex */; };
+		9172E4FA1CBDC27C00B1641E /* static_texture.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F71CBDBDB700B1641E /* static_texture.fragment */; };
 		91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6791CB23697005DA4C6 /* instancing3.vertex */; };
 		91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */; };
 /* End PBXBuildFile section */
@@ -173,6 +178,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E4ED1CBDBC9200B1641E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				9172E4F91CBDC27C00B1641E /* static_texture.vertex in CopyFiles */,
+				9172E4FA1CBDC27C00B1641E /* static_texture.fragment in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +243,10 @@
 		0A6EB6A11CB4D0C4005DA4C6 /* shadowmap_light.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_light.fragment; sourceTree = "<group>"; };
 		0A6EB6A21CB4D0F3005DA4C6 /* shadowmap_scene.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_scene.vertex; sourceTree = "<group>"; };
 		0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowmap_scene.fragment; sourceTree = "<group>"; };
+		9172E4F31CBDBC9200B1641E /* ch06-static-texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch06-static-texture"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9172E4F41CBDBCC300B1641E /* ch06_static_texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch06_static_texture.cpp; sourceTree = "<group>"; };
+		9172E4F61CBDBD4900B1641E /* static_texture.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = static_texture.vertex; sourceTree = "<group>"; };
+		9172E4F71CBDBDB700B1641E /* static_texture.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = static_texture.fragment; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +313,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E4EC1CBDBC9200B1641E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -316,6 +343,7 @@
 				0A6EB6761CB234C3005DA4C6 /* ch03-instancing-3 */,
 				0A6EB6891CB38C6F005DA4C6 /* ch04-gouraud */,
 				0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */,
+				9172E4F31CBDBC9200B1641E /* ch06-static-texture */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,6 +354,7 @@
 				0A5235F21CAA3A4200ED5AAA /* ch01 */,
 				0A5235F31CAA3A4200ED5AAA /* ch03 */,
 				0A6EB67B1CB38C53005DA4C6 /* ch04 */,
+				9172E4E61CBDBC7F00B1641E /* ch06 */,
 				0A5235F41CAA3A4200ED5AAA /* common */,
 				0A5235EB1CAA39F400ED5AAA /* main.cpp */,
 			);
@@ -455,6 +484,24 @@
 				0A6EB6A31CB4D214005DA4C6 /* shadowmap_scene.fragment */,
 			);
 			path = shadowmap;
+			sourceTree = "<group>";
+		};
+		9172E4E61CBDBC7F00B1641E /* ch06 */ = {
+			isa = PBXGroup;
+			children = (
+				9172E4E71CBDBC7F00B1641E /* static_texture */,
+			);
+			path = ch06;
+			sourceTree = "<group>";
+		};
+		9172E4E71CBDBC7F00B1641E /* static_texture */ = {
+			isa = PBXGroup;
+			children = (
+				9172E4F41CBDBCC300B1641E /* ch06_static_texture.cpp */,
+				9172E4F61CBDBD4900B1641E /* static_texture.vertex */,
+				9172E4F71CBDBDB700B1641E /* static_texture.fragment */,
+			);
+			path = static_texture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,6 +660,23 @@
 			productReference = 0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */;
 			productType = "com.apple.product-type.tool";
 		};
+		9172E4E81CBDBC9200B1641E /* ch06-static-texture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9172E4F01CBDBC9200B1641E /* Build configuration list for PBXNativeTarget "ch06-static-texture" */;
+			buildPhases = (
+				9172E4E91CBDBC9200B1641E /* Sources */,
+				9172E4EC1CBDBC9200B1641E /* Frameworks */,
+				9172E4ED1CBDBC9200B1641E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch06-static-texture";
+			productName = triangles;
+			productReference = 9172E4F31CBDBC9200B1641E /* ch06-static-texture */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -648,6 +712,7 @@
 				0A6EB6681CB234C3005DA4C6 /* ch03-instancing-3 */,
 				0A6EB67D1CB38C6F005DA4C6 /* ch04-gouraud */,
 				0A6EB6911CB4CE6A005DA4C6 /* ch04-shadowmap */,
+				9172E4E81CBDBC9200B1641E /* ch06-static-texture */,
 			);
 		};
 /* End PBXProject section */
@@ -743,6 +808,16 @@
 				0A6EB6931CB4CE6A005DA4C6 /* CKApp.cpp in Sources */,
 				0A6EB6941CB4CE6A005DA4C6 /* shader.cpp in Sources */,
 				0A6EB69F1CB4CEA8005DA4C6 /* shadowmap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E4E91CBDBC9200B1641E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9172E4F81CBDBEEC00B1641E /* CKApp.cpp in Sources */,
+				9172E4EB1CBDBC9200B1641E /* shader.cpp in Sources */,
+				9172E4F51CBDBCC300B1641E /* ch06_static_texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1319,52 @@
 			};
 			name = Release;
 		};
+		9172E4F11CBDBC9200B1641E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9172E4F21CBDBC9200B1641E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1333,6 +1454,15 @@
 			buildConfigurations = (
 				0A6EB69B1CB4CE6A005DA4C6 /* Debug */,
 				0A6EB69C1CB4CE6A005DA4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9172E4F01CBDBC9200B1641E /* Build configuration list for PBXNativeTarget "ch06-static-texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9172E4F11CBDBC9200B1641E /* Debug */,
+				9172E4F21CBDBC9200B1641E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
