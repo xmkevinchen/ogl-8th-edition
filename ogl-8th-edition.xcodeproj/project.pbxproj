@@ -66,6 +66,21 @@
 		9172E4F81CBDBEEC00B1641E /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
 		9172E4F91CBDC27C00B1641E /* static_texture.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F61CBDBD4900B1641E /* static_texture.vertex */; };
 		9172E4FA1CBDC27C00B1641E /* static_texture.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F71CBDBDB700B1641E /* static_texture.fragment */; };
+		9172E5011CBED31200B1641E /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		9172E5021CBED31200B1641E /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		9172E5061CBED31200B1641E /* static_texture.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F61CBDBD4900B1641E /* static_texture.vertex */; };
+		9172E5071CBED31200B1641E /* static_texture.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F71CBDBDB700B1641E /* static_texture.fragment */; };
+		9172E50E1CBED38600B1641E /* ch06_texture_wrapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E50D1CBED38600B1641E /* ch06_texture_wrapping.cpp */; };
+		9172E53E1CC01AE500B1641E /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		9172E53F1CC01AE500B1641E /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		9172E5421CC01AE500B1641E /* static_texture.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F61CBDBD4900B1641E /* static_texture.vertex */; };
+		9172E5431CC01AE500B1641E /* static_texture.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E4F71CBDBDB700B1641E /* static_texture.fragment */; };
+		9172E5491CC01B1100B1641E /* ch06_load_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E5481CC01B1100B1641E /* ch06_load_texture.cpp */; };
+		9172E54A1CC01B3400B1641E /* loadtexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E4FC1CBED26D00B1641E /* loadtexture.cpp */; };
+		9172E54B1CC01B3400B1641E /* vdds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E4FD1CBED26D00B1641E /* vdds.cpp */; };
+		9172E5501CC0641000B1641E /* test.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54D1CC063FE00B1641E /* test.dds */; };
+		9172E5511CC0664100B1641E /* test2.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54E1CC063FE00B1641E /* test2.dds */; };
+		9172E5521CC0664100B1641E /* test3.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54F1CC063FE00B1641E /* test3.dds */; };
 		91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6791CB23697005DA4C6 /* instancing3.vertex */; };
 		91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */; };
 /* End PBXBuildFile section */
@@ -189,6 +204,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E5051CBED31200B1641E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				9172E5061CBED31200B1641E /* static_texture.vertex in CopyFiles */,
+				9172E5071CBED31200B1641E /* static_texture.fragment in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E5411CC01AE500B1641E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				9172E5511CC0664100B1641E /* test2.dds in CopyFiles */,
+				9172E5521CC0664100B1641E /* test3.dds in CopyFiles */,
+				9172E5501CC0641000B1641E /* test.dds in CopyFiles */,
+				9172E5421CC01AE500B1641E /* static_texture.vertex in CopyFiles */,
+				9172E5431CC01AE500B1641E /* static_texture.fragment in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +287,16 @@
 		9172E4F41CBDBCC300B1641E /* ch06_static_texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch06_static_texture.cpp; sourceTree = "<group>"; };
 		9172E4F61CBDBD4900B1641E /* static_texture.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = static_texture.vertex; sourceTree = "<group>"; };
 		9172E4F71CBDBDB700B1641E /* static_texture.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = static_texture.fragment; sourceTree = "<group>"; };
+		9172E4FC1CBED26D00B1641E /* loadtexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = loadtexture.cpp; sourceTree = "<group>"; };
+		9172E4FD1CBED26D00B1641E /* vdds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vdds.cpp; sourceTree = "<group>"; };
+		9172E4FE1CBED26D00B1641E /* vermilion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vermilion.h; sourceTree = "<group>"; };
+		9172E50B1CBED31200B1641E /* ch06-texture-wrapping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch06-texture-wrapping"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9172E50D1CBED38600B1641E /* ch06_texture_wrapping.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch06_texture_wrapping.cpp; sourceTree = "<group>"; };
+		9172E5471CC01AE500B1641E /* ch06-load-texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch06-load-texture"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9172E5481CC01B1100B1641E /* ch06_load_texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch06_load_texture.cpp; sourceTree = "<group>"; };
+		9172E54D1CC063FE00B1641E /* test.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.dds; sourceTree = "<group>"; };
+		9172E54E1CC063FE00B1641E /* test2.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test2.dds; sourceTree = "<group>"; };
+		9172E54F1CC063FE00B1641E /* test3.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test3.dds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +370,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E5041CBED31200B1641E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E5401CC01AE500B1641E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -344,6 +408,8 @@
 				0A6EB6891CB38C6F005DA4C6 /* ch04-gouraud */,
 				0A6EB69D1CB4CE6A005DA4C6 /* ch04-shadowmap */,
 				9172E4F31CBDBC9200B1641E /* ch06-static-texture */,
+				9172E50B1CBED31200B1641E /* ch06-texture-wrapping */,
+				9172E5471CC01AE500B1641E /* ch06-load-texture */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -356,6 +422,7 @@
 				0A6EB67B1CB38C53005DA4C6 /* ch04 */,
 				9172E4E61CBDBC7F00B1641E /* ch06 */,
 				0A5235F41CAA3A4200ED5AAA /* common */,
+				9172E54C1CC063FE00B1641E /* media */,
 				0A5235EB1CAA39F400ED5AAA /* main.cpp */,
 			);
 			path = "ogl-8th-edition";
@@ -386,6 +453,7 @@
 		0A5235F41CAA3A4200ED5AAA /* common */ = {
 			isa = PBXGroup;
 			children = (
+				9172E4FB1CBED26D00B1641E /* vermilion */,
 				0A5235F51CAA3A6A00ED5AAA /* shader.hpp */,
 				0A5235F61CAA3A6A00ED5AAA /* shader.cpp */,
 				0A5FC3C21CACD06100A178B5 /* vutils.h */,
@@ -489,7 +557,9 @@
 		9172E4E61CBDBC7F00B1641E /* ch06 */ = {
 			isa = PBXGroup;
 			children = (
+				9172E53A1CC01ADE00B1641E /* load_texture */,
 				9172E4E71CBDBC7F00B1641E /* static_texture */,
+				9172E50C1CBED36300B1641E /* texture_wrapping */,
 			);
 			path = ch06;
 			sourceTree = "<group>";
@@ -502,6 +572,42 @@
 				9172E4F71CBDBDB700B1641E /* static_texture.fragment */,
 			);
 			path = static_texture;
+			sourceTree = "<group>";
+		};
+		9172E4FB1CBED26D00B1641E /* vermilion */ = {
+			isa = PBXGroup;
+			children = (
+				9172E4FE1CBED26D00B1641E /* vermilion.h */,
+				9172E4FC1CBED26D00B1641E /* loadtexture.cpp */,
+				9172E4FD1CBED26D00B1641E /* vdds.cpp */,
+			);
+			path = vermilion;
+			sourceTree = "<group>";
+		};
+		9172E50C1CBED36300B1641E /* texture_wrapping */ = {
+			isa = PBXGroup;
+			children = (
+				9172E50D1CBED38600B1641E /* ch06_texture_wrapping.cpp */,
+			);
+			path = texture_wrapping;
+			sourceTree = "<group>";
+		};
+		9172E53A1CC01ADE00B1641E /* load_texture */ = {
+			isa = PBXGroup;
+			children = (
+				9172E5481CC01B1100B1641E /* ch06_load_texture.cpp */,
+			);
+			path = load_texture;
+			sourceTree = "<group>";
+		};
+		9172E54C1CC063FE00B1641E /* media */ = {
+			isa = PBXGroup;
+			children = (
+				9172E54D1CC063FE00B1641E /* test.dds */,
+				9172E54E1CC063FE00B1641E /* test2.dds */,
+				9172E54F1CC063FE00B1641E /* test3.dds */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,6 +783,40 @@
 			productReference = 9172E4F31CBDBC9200B1641E /* ch06-static-texture */;
 			productType = "com.apple.product-type.tool";
 		};
+		9172E4FF1CBED31200B1641E /* ch06-texture-wrapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9172E5081CBED31200B1641E /* Build configuration list for PBXNativeTarget "ch06-texture-wrapping" */;
+			buildPhases = (
+				9172E5001CBED31200B1641E /* Sources */,
+				9172E5041CBED31200B1641E /* Frameworks */,
+				9172E5051CBED31200B1641E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch06-texture-wrapping";
+			productName = triangles;
+			productReference = 9172E50B1CBED31200B1641E /* ch06-texture-wrapping */;
+			productType = "com.apple.product-type.tool";
+		};
+		9172E53B1CC01AE500B1641E /* ch06-load-texture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9172E5441CC01AE500B1641E /* Build configuration list for PBXNativeTarget "ch06-load-texture" */;
+			buildPhases = (
+				9172E53C1CC01AE500B1641E /* Sources */,
+				9172E5401CC01AE500B1641E /* Frameworks */,
+				9172E5411CC01AE500B1641E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch06-load-texture";
+			productName = triangles;
+			productReference = 9172E5471CC01AE500B1641E /* ch06-load-texture */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -713,6 +853,8 @@
 				0A6EB67D1CB38C6F005DA4C6 /* ch04-gouraud */,
 				0A6EB6911CB4CE6A005DA4C6 /* ch04-shadowmap */,
 				9172E4E81CBDBC9200B1641E /* ch06-static-texture */,
+				9172E4FF1CBED31200B1641E /* ch06-texture-wrapping */,
+				9172E53B1CC01AE500B1641E /* ch06-load-texture */,
 			);
 		};
 /* End PBXProject section */
@@ -818,6 +960,28 @@
 				9172E4F81CBDBEEC00B1641E /* CKApp.cpp in Sources */,
 				9172E4EB1CBDBC9200B1641E /* shader.cpp in Sources */,
 				9172E4F51CBDBCC300B1641E /* ch06_static_texture.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E5001CBED31200B1641E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9172E50E1CBED38600B1641E /* ch06_texture_wrapping.cpp in Sources */,
+				9172E5011CBED31200B1641E /* CKApp.cpp in Sources */,
+				9172E5021CBED31200B1641E /* shader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E53C1CC01AE500B1641E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9172E54A1CC01B3400B1641E /* loadtexture.cpp in Sources */,
+				9172E54B1CC01B3400B1641E /* vdds.cpp in Sources */,
+				9172E53E1CC01AE500B1641E /* CKApp.cpp in Sources */,
+				9172E5491CC01B1100B1641E /* ch06_load_texture.cpp in Sources */,
+				9172E53F1CC01AE500B1641E /* shader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,6 +1529,98 @@
 			};
 			name = Release;
 		};
+		9172E5091CBED31200B1641E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9172E50A1CBED31200B1641E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9172E5451CC01AE500B1641E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9172E5461CC01AE500B1641E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1463,6 +1719,24 @@
 			buildConfigurations = (
 				9172E4F11CBDBC9200B1641E /* Debug */,
 				9172E4F21CBDBC9200B1641E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9172E5081CBED31200B1641E /* Build configuration list for PBXNativeTarget "ch06-texture-wrapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9172E5091CBED31200B1641E /* Debug */,
+				9172E50A1CBED31200B1641E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9172E5441CC01AE500B1641E /* Build configuration list for PBXNativeTarget "ch06-load-texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9172E5451CC01AE500B1641E /* Debug */,
+				9172E5461CC01AE500B1641E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
