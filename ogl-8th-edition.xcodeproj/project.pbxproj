@@ -81,6 +81,16 @@
 		9172E5501CC0641000B1641E /* test.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54D1CC063FE00B1641E /* test.dds */; };
 		9172E5511CC0664100B1641E /* test2.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54E1CC063FE00B1641E /* test2.dds */; };
 		9172E5521CC0664100B1641E /* test3.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54F1CC063FE00B1641E /* test3.dds */; };
+		9172E5551CC2245500B1641E /* loadtexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E4FC1CBED26D00B1641E /* loadtexture.cpp */; };
+		9172E5561CC2245500B1641E /* vdds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E4FD1CBED26D00B1641E /* vdds.cpp */; };
+		9172E5571CC2245500B1641E /* CKApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FC3D41CACD23E00A178B5 /* CKApp.cpp */; };
+		9172E5591CC2245500B1641E /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A5235F61CAA3A6A00ED5AAA /* shader.cpp */; };
+		9172E55C1CC2245500B1641E /* test2.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54E1CC063FE00B1641E /* test2.dds */; };
+		9172E55D1CC2245500B1641E /* test3.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54F1CC063FE00B1641E /* test3.dds */; };
+		9172E55E1CC2245500B1641E /* test.dds in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E54D1CC063FE00B1641E /* test.dds */; };
+		9172E5671CC224C500B1641E /* ch06_multiple_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9172E5661CC224C500B1641E /* ch06_multiple_texture.cpp */; };
+		9172E56A1CC226BD00B1641E /* multiple_texture.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E5681CC2258A00B1641E /* multiple_texture.vertex */; };
+		9172E56B1CC226BD00B1641E /* multiple_texture.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9172E5691CC2265A00B1641E /* multiple_texture.fragment */; };
 		91C01F4D1CB2DEB50037D1DB /* instancing3.vertex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB6791CB23697005DA4C6 /* instancing3.vertex */; };
 		91C01F4E1CB2DEB50037D1DB /* instancing3.fragment in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A6EB67A1CB23A51005DA4C6 /* instancing3.fragment */; };
 /* End PBXBuildFile section */
@@ -229,6 +239,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E55B1CC2245500B1641E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				9172E56A1CC226BD00B1641E /* multiple_texture.vertex in CopyFiles */,
+				9172E56B1CC226BD00B1641E /* multiple_texture.fragment in CopyFiles */,
+				9172E55C1CC2245500B1641E /* test2.dds in CopyFiles */,
+				9172E55D1CC2245500B1641E /* test3.dds in CopyFiles */,
+				9172E55E1CC2245500B1641E /* test.dds in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -297,6 +321,10 @@
 		9172E54D1CC063FE00B1641E /* test.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.dds; sourceTree = "<group>"; };
 		9172E54E1CC063FE00B1641E /* test2.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test2.dds; sourceTree = "<group>"; };
 		9172E54F1CC063FE00B1641E /* test3.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = test3.dds; sourceTree = "<group>"; };
+		9172E5641CC2245500B1641E /* ch06-multiple-texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ch06-multiple-texture"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9172E5661CC224C500B1641E /* ch06_multiple_texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ch06_multiple_texture.cpp; sourceTree = "<group>"; };
+		9172E5681CC2258A00B1641E /* multiple_texture.vertex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = multiple_texture.vertex; sourceTree = "<group>"; };
+		9172E5691CC2265A00B1641E /* multiple_texture.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = multiple_texture.fragment; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +412,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9172E55A1CC2245500B1641E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -410,6 +445,7 @@
 				9172E4F31CBDBC9200B1641E /* ch06-static-texture */,
 				9172E50B1CBED31200B1641E /* ch06-texture-wrapping */,
 				9172E5471CC01AE500B1641E /* ch06-load-texture */,
+				9172E5641CC2245500B1641E /* ch06-multiple-texture */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -557,6 +593,7 @@
 		9172E4E61CBDBC7F00B1641E /* ch06 */ = {
 			isa = PBXGroup;
 			children = (
+				9172E5651CC2248C00B1641E /* multiple_texture */,
 				9172E53A1CC01ADE00B1641E /* load_texture */,
 				9172E4E71CBDBC7F00B1641E /* static_texture */,
 				9172E50C1CBED36300B1641E /* texture_wrapping */,
@@ -608,6 +645,16 @@
 				9172E54F1CC063FE00B1641E /* test3.dds */,
 			);
 			path = media;
+			sourceTree = "<group>";
+		};
+		9172E5651CC2248C00B1641E /* multiple_texture */ = {
+			isa = PBXGroup;
+			children = (
+				9172E5661CC224C500B1641E /* ch06_multiple_texture.cpp */,
+				9172E5681CC2258A00B1641E /* multiple_texture.vertex */,
+				9172E5691CC2265A00B1641E /* multiple_texture.fragment */,
+			);
+			path = multiple_texture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -817,6 +864,23 @@
 			productReference = 9172E5471CC01AE500B1641E /* ch06-load-texture */;
 			productType = "com.apple.product-type.tool";
 		};
+		9172E5531CC2245500B1641E /* ch06-multiple-texture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9172E5611CC2245500B1641E /* Build configuration list for PBXNativeTarget "ch06-multiple-texture" */;
+			buildPhases = (
+				9172E5541CC2245500B1641E /* Sources */,
+				9172E55A1CC2245500B1641E /* Frameworks */,
+				9172E55B1CC2245500B1641E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch06-multiple-texture";
+			productName = triangles;
+			productReference = 9172E5641CC2245500B1641E /* ch06-multiple-texture */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -855,6 +919,7 @@
 				9172E4E81CBDBC9200B1641E /* ch06-static-texture */,
 				9172E4FF1CBED31200B1641E /* ch06-texture-wrapping */,
 				9172E53B1CC01AE500B1641E /* ch06-load-texture */,
+				9172E5531CC2245500B1641E /* ch06-multiple-texture */,
 			);
 		};
 /* End PBXProject section */
@@ -982,6 +1047,18 @@
 				9172E53E1CC01AE500B1641E /* CKApp.cpp in Sources */,
 				9172E5491CC01B1100B1641E /* ch06_load_texture.cpp in Sources */,
 				9172E53F1CC01AE500B1641E /* shader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9172E5541CC2245500B1641E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9172E5551CC2245500B1641E /* loadtexture.cpp in Sources */,
+				9172E5671CC224C500B1641E /* ch06_multiple_texture.cpp in Sources */,
+				9172E5561CC2245500B1641E /* vdds.cpp in Sources */,
+				9172E5571CC2245500B1641E /* CKApp.cpp in Sources */,
+				9172E5591CC2245500B1641E /* shader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1621,6 +1698,52 @@
 			};
 			name = Release;
 		};
+		9172E5621CC2245500B1641E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9172E5631CC2245500B1641E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lglew",
+					"-lglfw",
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreFoundation,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1737,6 +1860,15 @@
 			buildConfigurations = (
 				9172E5451CC01AE500B1641E /* Debug */,
 				9172E5461CC01AE500B1641E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9172E5611CC2245500B1641E /* Build configuration list for PBXNativeTarget "ch06-multiple-texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9172E5621CC2245500B1641E /* Debug */,
+				9172E5631CC2245500B1641E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
