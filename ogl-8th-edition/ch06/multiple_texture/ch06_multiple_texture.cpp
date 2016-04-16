@@ -51,7 +51,7 @@ public:
         
         shader->use();
         
-        matrix = glGetUniformLocation(shader->program, "matrix");
+        time = glGetUniformLocation(shader->program, "time");
         glUniform1i(glGetUniformLocation(shader->program, "tex1"), 0);
         glUniform1i(glGetUniformLocation(shader->program, "tex2"), 1);
         
@@ -76,10 +76,8 @@ public:
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glDisable(GL_CULL_FACE);
-        
-        glm::mat2 mat2 = glm::mat2(glm::vec2( glm::cos(t), glm::sin(t)),
-                                   glm::vec2(-glm::sin(t), glm::cos(t)));
-        glUniformMatrix2fv(matrix, 1, GL_FALSE, glm::value_ptr(mat2));
+                
+        glUniform1f(time, t);
         
         glBindVertexArray(vertex_array);
         glActiveTexture(GL_TEXTURE0);
@@ -108,7 +106,6 @@ private:
     GLuint vertex_array;
     GLuint vertex_buffer;
     GLuint time;
-    GLuint matrix;
     
 };
 

@@ -6,13 +6,13 @@ layout (location = 1) in vec2 in_tex_coord;
 out vec2 tex_coord_0;
 out vec2 tex_coord_1;
 
-uniform mat2 matrix;
+uniform float time;
 
 void main(void) {
-//    const mat2 m = mat2( vec2( cos(time), sin(time)),
-//                         vec2(-sin(time), cos(time)) );
+    mat2 m = mat2(vec2( cos(time), sin(time)),
+                  vec2(-sin(time), cos(time)) );
     
     gl_Position = vec4(in_poisition, 0.5, 1.0);
-    tex_coord_0 = in_tex_coord * matrix;
-    tex_coord_1 = in_tex_coord * transpose(matrix);
+    tex_coord_0 = in_tex_coord * m;
+    tex_coord_1 = in_tex_coord * transpose(m);
 }
